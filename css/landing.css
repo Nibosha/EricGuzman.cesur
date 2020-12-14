@@ -29,13 +29,13 @@ h1{
 .landing-page-container{
     width: 100%;
     min-height: 100%;
-    height: 100vh;
+    height: 100vmin;
     background-image: url(../img/BG.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Goldman', cursive;
     color: var(--main-color);
     
 }
@@ -68,7 +68,6 @@ h1{
 
 .header__item{
     display: inline-block;
-    float: left;
 }
 
 .menu-icon__line{
@@ -123,7 +122,6 @@ h1{
 .subtittle{
     font-size: 1rem;
     display: inline-block;
-    float: left;
     position: relative;
     top: 40%;
     left: -11.5rem;
@@ -232,7 +230,7 @@ h1{
     border-color: var(--main-color) transparent;
     border-width: 2px;
     transform: rotate(45deg);
-    animation: ellipseRotate2 15s ease-in-out infinite;
+    animation: ellipseRotate2 5s linear infinite;
     top: -4rem;
     left: 4rem;
 }
@@ -265,10 +263,6 @@ h1{
 @keyframes ellipseRotateInner{
     0%{
         transform: rotate(-45deg);
-    }
-
-    50%{
-        transform: rotate(-405deg);
     }
 
     100%{
@@ -314,3 +308,4 @@ h1{
         transform: rotate(-540deg);
     }
 }
+

@@ -1,0 +1,431 @@
+:root{
+    --main-color: rgb(202, 210, 197);
+    --font-color: rgb(47, 62, 70);
+    --border-color:  #8acfad;
+    --deco-color-1: #354f52;
+    --deco-color-2: #52796f;
+}
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+*{
+    font-family: 'Goldman', cursive;
+    color: var(--main-color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-name h1{
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    white-space: nowrap;
+}
+
+header, main, aside, section, footer{ 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+header{
+    width: 100%; 
+    height: 15vh;
+    overflow-x: hidden;
+}
+
+aside{
+    width: 12.5%;
+    height: 75vh;
+    background: black;
+    overflow: hidden;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    align-items: center;
+}
+
+section{
+    width: 75%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background: black;
+}
+
+main{
+    width: 100%; 
+    height: 75vh; 
+    background: var(--font-color);
+}
+
+.teselado{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hexagon-teselado.svg");
+    background-repeat: repeat;
+}
+
+.aesthetic-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400vw;
+    height: 100%;
+    background: rgb(247,37,133);
+    background: linear-gradient(30deg, rgba(247,37,133,1) 0%, rgba(114,9,183,1) 7%,
+     rgba(58,12,163,1) 12%, rgba(67,97,238,1) 17%, rgba(76,201,240,1) 25%,
+      rgba(67,97,238,1) 32%, rgba(58,12,163,1) 37%, rgba(114,9,183,1) 42%,
+       rgba(247,37,133,1) 50%, rgba(114,9,183,1) 57%, rgba(58,12,163,1) 62%,
+        rgba(67,97,238,1) 67%, rgba(76,201,240,1) 75%, rgba(67,97,238,1) 82%,
+         rgba(58,12,163,1) 87%, rgba(114,9,183,1) 92%, rgba(247,37,133,1) 100%);    
+   animation: backgroundMovement 15s linear infinite;
+}
+
+.head-logo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    width: 20%;
+    z-index: 2;
+}
+
+.head-logo img{
+    height: 80%;
+}
+.page-name{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.page-name a{
+    text-decoration: none;
+    color: var(--border-color);
+}
+
+#hamburguer{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    width: 20%;
+}
+
+.circle{
+    width: 12vh;
+    height: 12vh;
+    background: var(--main-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.line{
+    position: absolute;
+    background: var(--font-color);
+    height: 10%;
+    width: 60%;
+    border-radius: 15%;
+    left: 20%;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.35) 0.35s;
+}
+
+.top{
+    top: 25%;
+}
+.mid{
+    top: 45%;
+}
+.bot{
+    top: 65%;
+}
+
+.icon.close .top{
+    transform: rotate(45deg);
+    top: 48%;
+}
+
+.icon.close .mid, .icon.close .bot{
+    transform: rotate(-45deg);
+    top: 48%;
+}
+
+.border-hexagon{
+    position: absolute;
+    height: 132px;
+    width: 132px;
+    display: flex;
+    z-index: 2;
+    animation: blinkHex 4s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.border-hexagon img{
+    height: 100%;
+    width: 100%;
+}
+
+.hex-top-left{
+    top: 0;
+    left: 0;
+}
+
+.hex-top-right{
+    top: 0;
+    right: 0;
+    transform: scale(-1, 1);
+}
+
+.hex-bot-left{
+    bottom: 0;
+    left: 0;
+    transform: scale(1,-1);
+}
+
+.hex-bot-right{
+    bottom: 0;
+    right: 0;
+    transform: scale(-1);
+}
+
+.hex-top-1{
+    top:0;
+    left: 20%;
+}
+
+.hex-top-2{
+    top:0;
+    left: 45%;
+}
+
+.hex-top-3{
+    top:0;
+    left: 65%;
+}
+
+.hex-bot-1{
+    bottom: 0;
+    left: 20%;
+    transform: scale(-1);
+}
+
+.hex-bot-2{
+    bottom: 0;
+    left: 45%;
+    transform: scale(-1);
+}
+
+.hex-bot-3{
+    bottom: 0;
+    left: 65%;
+    transform: scale(-1);
+}
+
+.hex-mid-left{
+    top: 178px;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.hex-mid-right{
+    top: 200px;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.hidden-hexagon{
+    left: -100%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.delay-1{
+    animation-delay: 0.5s;
+}
+
+.delay-2{
+    animation-delay: 1s;
+}
+
+.delay-3{
+    animation-delay: 1.5s;
+}
+
+.delay-4{
+    animation-delay: 2s;
+}
+
+aside .hex-mid-left{
+    left: -8px;
+}
+
+aside .hex-mid-right{
+    right: -8px;
+}
+
+.aside-left-open{
+    width: 30%;
+}
+
+.aside-left-open .hidden-hexagon{
+    left: 0;
+}
+
+.section-open{
+    width: 70%;
+}
+
+.aside-right-close{
+    width: 0;
+}
+
+.nav-aside{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+
+
+@media screen and (max-width: 786px){
+    header{
+        height: 15vmax;
+        justify-content: center;
+    }
+
+    aside{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .page-name h1{
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .circle{
+        width: 8vmax;
+        height: 8vmax;
+    }
+
+
+}
+
+@media (max-width: 720px){
+    .hex-top-1{
+        left: 28%;
+    }
+
+    .hex-top-2{
+        left: 55%;
+    }
+
+    .hex-bot-1{
+        left: 28%;
+    }
+
+    .hex-bot-2{
+        left: 55%;
+    }
+
+    .hex-top-3, .hex-bot-3{
+        display: none;
+    }
+}
+
+@media (max-width: 548px){
+    .hex-top-1{
+        left: 35%;
+    }
+
+    .hex-bot-1{
+        left: 35%;
+    }
+
+    .hex-top-2, .hex-bot-2 {
+        display: none;
+    } 
+
+}
+
+@media (max-width: 378px){
+    .hex-top-1, .hex-bot-1, .hex-top-right, .hex-bot-left {
+        display: none;
+    }
+}
+
+@media (max-height: 620px){
+    .hex-mid-left, .hex-mid-right{
+        display: none;
+    }
+}
+
+@keyframes backgroundMovement{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes blinkHex{
+    0%{
+        opacity: 0.8;
+    }
+
+    25%{
+        opacity: 0.7;
+    }
+
+    40%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0.7;
+    }
+
+    100%{
+        opacity: 0.8;
+    }
+}
+
+@keyframes marquee{
+    0%{
+        transform: translate3d(var(--mov-initial), 0, 0);
+    }
+
+    100%{
+        transform: translate3d(var(--mov-final), 0, 0);
+    }
+}
