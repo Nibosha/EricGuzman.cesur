@@ -1,81 +1,284 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600;700&display=swap" rel="stylesheet">-->
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="includes/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link rel="icon" href="icon/favicon.ico">
-    <title>CesurEric</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Nibosha Desings</title>
 </head>
 <body>
-    <header class="sticky" id="header">
-        
+    <header>
+        <div class="teselado"></div>
+        <div class="aesthetic-background"></div>
+        <div class="head-logo">
+            <img src="mmedia/img/HeadLogo.png" alt="logo">
+        </div>
         <div class="page-name">
-            <div class="head-logo">
-                <img src="img/HeadLogo.png" alt="logo">
-            </div>
-            <h1>
-                <a href="index.html">Eric Guzmán</a>          
-            </h1>
-        </div> 
-        <nav>
-            <div class="head-logo-sm">
-                <img src="img/HeadLogo.png" alt="logo">
-            </div>      
-            <div class="circle hamburguer">
-                <div class="line" id = "lineTop"></div>
-                <div class="line" id = "lineMid"></div>
-                <div class="line" id = "lineBot"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-        </nav>
+            <h1>Eric Guzman</h1>
+        </div>
+        <div id="hamburguer">
+            <dix class="circle icon">
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line bot"></span>
+            </dix>
+        </div>
     </header>
     <main>
-        
-        <div class = "card">
-            <img class = "card-img" src="img/calc.png" alt="card">
-            <h4 class="card-tittle">Calculadora Sovietica</h4>
-            <hr>
-            <p class="card-text">En la antigua URSS se usaba el sistema RPN para realizar las operaciones. Con esta calculadora se emula dicho sistema...</p>
-            <div class="card-btn"><a href="#">Ver</a></div>
-        </div>
-        <div class = "card">
-            <img class = "card-img" src="img/calc.png" alt="card">
-            <h4 class="card-tittle">Guía de Estilos</h4>
-            <hr>
-            <p class="card-text">Explora la guía de estilos que he usado en esta página.</p>
-            <div class="card-btn"><a href="#">Ver</a></div>
-        </div>
-        <div class = "card">
-            <img class = "card-img" src="img/calc.png" alt="card">
-            <h4 class="card-tittle">Efecto Parallax</h4>
-            <hr>
-            <p class="card-text">De AdobeXD a la web. Visita los parallax que tengo prepadados.</p>
-            <div class="card-btn"><a href="#">Ver</a></div>
-        </div>
-        <div class = "card">
-            <img class = "card-img" src="img/calc.png" alt="card">
-            <h4 class="card-tittle">Titulo</h4>
-            <hr>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus autem eveniet sint quisquam consequuntur assumenda reprehenderit nam eos!</p>
-            <div class="card-btn"><a href="#">Ver</a></div>
-        </div>
-        <div class = "card">
-            <img class = "card-img" src="img/calc.png" alt="card">
-            <h4 class="card-tittle">Titulo</h4>
-            <hr>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus autem eveniet sint quisquam consequuntur assumenda reprehenderit nam eos!</p>
-            <div class="card-btn"><a href="#">Ver</a></div>
-        </div>
+        <aside class="aside-left">
+            <div class="border-hexagon hex-top-left delay-3 hidden-hexagon"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left delay hidden-hexagon"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left delay-1 hidden-hexagon"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-2 hidden-hexagon"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-3 hidden-hexagon"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay hidden-hexagon"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right delay-2"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right delay-4"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right delay-2"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right delay-1"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right delay-3"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-right delay-4"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-right "><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
+            <nav class="nav-aside">
+                <div class="nav-option" id="aboutMe"><h2>About me</h2></div>
+                <div class="nav-option" id="curriculum"><h2>Curriculum</h2></div>
+                <div class="nav-option" id="contact"><h2>Contact</h2></div>
+                </ul>
+            </nav>
+        </aside>
+        <section id="center">  
+            <div class="border-hexagon hex-top-left"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left delay-2"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left delay-4"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right delay-4"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right delay-3"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-right"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-2"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-1"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-3"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right delay-3"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-right delay-2"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+    
+            <div class="border-hexagon hex-top-1 delay-4"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-1 delay-3"><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-2 delay-3"><img src="mmedia/img/hexagon-border-rect-1-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-2"><img src="mmedia/img/hexagon-border-rect-1-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-3"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-3 delay-2"><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-1 delay-1"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-1 delay-3"><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-2 delay-4"><img src="mmedia/img/hexagon-border-rect-1-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-2 delay-1"><img src="mmedia/img/hexagon-border-rect-1-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-3 delay-4"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-3 delay-2"><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
 
+            <div class="border-hexagon hex-mid-right delay-2"><img src="mmedia/img/hexagon-border-rect-2-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-right "><img src="mmedia/img/hexagon-border-rect-2-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-left delay-4"><img src="mmedia/img/hexagon-border-rect-1-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-left "><img src="mmedia/img/hexagon-border-rect-1-part2.svg" alt=""></div>
+
+            
+            <div class="content-container  container-center" id="aboutMe-container">
+                <h2 class="content-tittle">About me</h2>
+                <div class="content-body">
+                    <div class="aboutMe-content-img">
+                        <img src="mmedia/img/portrait.jpg" alt="portrait">
+                    </div> 
+                    <div class="aboutMe-content-text">
+                        <p>Soy Eric Guzman, diseñador web fullstack.</p> 
+                        <p>Interesado especialmente en el tratamiento digital de imágenes y la creación de webs que te dejen sin aliento.</p>
+                        <p>Visita algunos de mis ejemplos para ver mi trabajo.</p>
+                    </div> 
+                </div>                                  
+            </div>
+            
+
+            
+            <div class="content-container" id="curriculum-container">
+                <h2 class="content-tittle">Curriculum</h2>
+                <div class="content-body">
+                        
+                    <svg>
+                        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                    </svg>
+                </div>                                  
+            </div>
+            
+            <div class="content-container" id="contact-container">
+                <h2 class="content-tittle">Contact</h2>
+                <div class="content-body">
+                    <div class="aboutMe-content-text">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet iure, distinctio sunt iste exercitationem reprehenderit temporibus repudiandae possimus eum. Expedita illum aspernatur laborum et nostrum laudantium incidunt corporis omnis explicabo.</p>
+                    </div> 
+                </div>                                  
+            </div>
+
+            <div class="content-container" id="calculadora-container">
+                <h2 class="content-tittle">Calculadora</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>La Calculadora está programada 100% en JS.</p>
+                        <p>En un futuro le añadiré más utilidades, por ahora simplemente funciona ¡Pruébala!</p>
+                    </div>
+                    <div class="calculadora-container">
+                        <div class="calculadora-screen">
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-7">7</div>
+                            <div class="calculadora-botton" id="btn-8">8</div>
+                            <div class="calculadora-botton" id="btn-9">9</div>
+                            <div class="calculadora-botton long-text" id="btn-del">DEL</div>
+                            <div class="calculadora-botton long-text" id="btn-ac">AC</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-4">4</div>
+                            <div class="calculadora-botton" id="btn-5">5</div>
+                            <div class="calculadora-botton" id="btn-6">6</div>
+                            <div class="calculadora-botton" id="btn-mult">x</div>
+                            <div class="calculadora-botton" id="btn-div">:</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-1">1</div>
+                            <div class="calculadora-botton" id="btn-2">2</div>
+                            <div class="calculadora-botton" id="btn-3">3</div>
+                            <div class="calculadora-botton" id="btn-sum">+</div>
+                            <div class="calculadora-botton" id="btn-rest">-</div>
+                        </div>
+                        <div class="calculadora-botton-row">
+                            <div class="calculadora-botton" id="btn-0">0</div>
+                            <div class="calculadora-botton" id="btn-punto">.</div>
+                            <div class="calculadora-botton long-text" id="btn-exp">EXP</div>
+                            <div class="calculadora-botton long-text" id="btn-ans">Ans</div>
+                            <div class="calculadora-botton" id="btn-equal">=</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container" id="cambio-fuentes-container">
+                <h2 class="content-tittle" id="cambio-tittle">Cambio de Fuentes</h2>
+                <div class="content-body col-body" id="cambio-body">
+                    <div class="centre-content-text" id="cambio-text">
+                        <p>En este lugar puedes modificar el aspecto de la página gracias a JS</p>
+                        <p>No te preocupes, solo afectará a la página actual.</p>
+                        <p>Prueba a hacer doble click sobre el fondo.</p>
+                    </div>
+                    <div class="content-form">
+                        <label>Tamaño Fuente: </label>
+                        <select id="fontsize-select">
+                            <option value="small">Pequeño</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="big">Grande</option>
+                            <option value="huge">Gigante</option>
+
+
+                        </select>
+                    </div>
+                    <div class="content-form">
+                        <label>Vistas: </label>
+                        <input type="text" readonly id="visitas">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content-container" id="url-container">
+                <h2 class="content-tittle">URL Propia</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé una URL propia.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EgX7XkZNmKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container" id="certificado-container">
+                <h2 class="content-tittle">Certificado SSL</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé la obtención de certificados SSL.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ygeT2w0eXt0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container" id="ftp-seguro-container">
+                <h2 class="content-tittle">FTP Seguro</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como realicé la obtención del certificado FTP.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/H08o0ogYkFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container" id="configuracion-container">
+                <h2 class="content-tittle">Configuracion Servidores</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text">
+                        <p>En el siguiente video muestro como configurar el entorno Laragon.</p>
+                    </div>
+                    <div class="content-iframe">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPsHrjGRA4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container" id="guia-estilos-container">
+                <h2 class="content-tittle">Guia de Estilos</h2>
+                <div class="content-body">
+                    <div class="centre-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et deleniti incidunt asperiores quaerat possimus eius temporibus excepturi, odit, voluptas doloremque veritatis? Beatae, nam. Inventore doloremque unde velit animi veniam incidunt!</div>
+                </div>
+            </div>
+
+            
+        </section>
+        <aside class="aside-right">
+            <div class="border-hexagon hex-top-left delay-4"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left delay-3"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div>
+            <div class="border-hexagon hex-top-left"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>
+            <div class="border-hexagon hex-bot-left delay-3"><img src="mmedia/img/hexagon-border-part1.svg" alt=""></div>  
+            <div class="border-hexagon hex-bot-left"><img src="mmedia/img/hexagon-border-part2.svg" alt=""></div> 
+            <div class="border-hexagon hex-bot-left delay-2"><img src="mmedia/img/hexagon-border-part3.svg" alt=""></div>         
+            <div class="border-hexagon hex-mid-left delay-2"><img src="mmedia/img/hexagon-border-rect-1-part1.svg" alt=""></div>
+            <div class="border-hexagon hex-mid-left "><img src="mmedia/img/hexagon-border-rect-1-part2.svg" alt=""></div>
+            <nav class="nav-aside">
+                <div class="nav-option-desplegable"><h2>Desarrollo</h2>
+                    <div class="nav-desplegable">
+                        <div class="nav-option" id="calculadora"><h3>Calculadora</h3></div>
+                        <div class="nav-option" id="cambio-fuentes"><h3>Cambio de fuente</h3></div>
+                    </div>
+                </div>
+                <div class="nav-option-desplegable"><h2>Despliegue</h2>
+                    <div class="nav-desplegable">
+                        <div class="nav-option" id="url"><h3>URL Propia</h3></div>
+                        <div class="nav-option" id="certificado"><h3>Certificado SSL</h3></div>
+                        <div class="nav-option" id="ftp-seguro"><h3>FTP Seguro</h3></div>
+                        <div class="nav-option" id="configuracion"><h3>Configuracion servidores</h3></div>
+                    </div>
+                </div>
+                <div class="nav-option-desplegable"><h2>Diseño</h2>
+                    <div class="nav-desplegable">
+                        <div class="nav-option" id="guia-estilos"><h3>Guia Estilos</h3></div>
+                    </div>
+                </div>     
+            </nav>
+        </aside>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="includes/js/app.js"></script>
+    <script src="includes/js/jqueryScripts.js"></script>
+    <script src="includes/js/calculadora.js"></script>
 </body>
 </html>

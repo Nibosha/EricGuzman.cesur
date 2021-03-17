@@ -1,0 +1,257 @@
+@import "header.css";
+@import "hex.css";
+@import "container.css";
+@import "calculadora.css";
+
+:root{
+    --main-color: #cad2c5;
+    --font-color: #2f3e46;
+    --border-color:  #8acfad;
+    --deco-color-1: #4cc9f0;
+    --deco-color-2: #f72585;
+    --deco-color-2-darker: #940545;
+}
+
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+*{
+    font-family: 'Goldman', cursive;
+    color: var(--main-color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header, main, aside, section, footer{ 
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+header{
+    width: 100%; 
+    height: 15vh;
+    overflow-x: hidden;
+    justify-content: flex-start;
+}
+
+aside{
+    width: 12.5%;
+    height: 85vh;
+    background: black;
+    overflow: hidden;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    align-items: center;
+    z-index: 3;
+}
+
+section{
+    width: 75%;
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    position: relative;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background: black;
+}
+
+main{
+    width: 100%; 
+    height: 85vh; 
+    background-color: #141b1f;
+}
+
+
+
+.aside-left-open{
+    width: 30%;
+}
+
+.aside-right-open{
+    width: 30%;
+}
+
+.aside-left-open .hidden-hexagon{
+    left: 0;
+}
+
+.section-open{
+    width: 70%;
+}
+
+.aside-right-close{
+    width: 0;
+}
+
+.aside-left-close{
+    width: 0;
+}
+
+.nav-aside{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-option{
+    cursor: pointer;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+
+.nav-option-desplegable{
+    cursor: pointer;
+}
+
+.nav-desplegable{
+    padding-left: 1rem;
+    cursor: pointer;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    transition: all 0.5s ease-in 0s;
+    display: none;
+    align-content: center;
+}
+
+.nav-desplegable .nav-option{
+    padding-top: 2rem;
+}
+
+
+#aboutMe{
+    pointer-events: none;
+}
+
+#aboutMe h2{
+    color: var(--deco-color-1);
+}
+
+.nav-option:hover.nav-option h2{
+    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
+}
+
+.nav-option h2, .nav-option-desplegable h2{
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    white-space: nowrap;
+}
+
+.nav-option h3{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--deco-color-2); 
+    background-image: linear-gradient(60deg, rgba(247,37,133,1) 0%, rgba(114,9,183,1) 25%,
+    rgba(58,12,163,1) 50%, rgba(67,97,238,1) 75%, rgba(76,201,240,1) 100%);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--deco-color-2-darker);
+    background-image: linear-gradient(60deg, rgb(150, 25, 81) 0%, rgb(61, 4, 99) 25%,
+    rgb(35, 8, 97) 50%, rgb(44, 65, 158)75%, rgb(60, 147, 173) 100%); 
+    filter: saturate(30%);
+  }
+
+@media screen and (max-width: 786px){
+    header{
+        height: 15vmax;
+        justify-content: center;
+    }
+
+    aside{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .page-name h1{
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .circle{
+        width: 8vmax;
+        height: 8vmax;
+    }
+
+    .content-container{
+        height: 85 vh;
+    }
+
+    .content-tittle{
+        height: 10vh;
+        padding-top: 2vh;
+    }
+
+    .content-body{
+        height: 75vh;
+        flex-direction: column;
+        padding: 0 1.2rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .aboutMe-content-text{
+        width: 90%;
+    }
+
+    .aboutMe-content-img{
+        height: 40%;
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem;
+    }
+
+    .aboutMe-content-img img{
+        height: 100%;
+    }
+
+    
+
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0%);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('../../mmedia/fonts/DigitalNumbers-Regular.woff') format('woff');
+    }
