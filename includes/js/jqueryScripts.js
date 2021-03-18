@@ -192,35 +192,94 @@ $("#fontsize-select").change(function(){
 $("#visitas").val(localStorage.visitas);
 
 //=================AUDIOS=====================================================//
+var play = -1;
 function stopAllAudios(){
     for (let i = 0; i < 5; i++) {
         $(".audio")[i].pause();
         $(".audio")[i].currentTime = 0;  
     }
 }
+
+function back2URSS(){
+    alert("Te dije que no lo pulsaras, ahora es demasiado tarde.");
+    $("#audio-dom-container").css("background-color","rgb(234,43,25)");
+    $("#audio-dom-container > .content-tittle").css("color","gold");
+    $("#audio-dom-container > .content-tittle").css("font-size","3.2rem");
+    $("#audio-dom-container > .content-tittle").html("La URSS ha vuelto");
+    $("#audio-dom-container > .content-body > .centre-content-text > p").css("color","gold");
+    $("#audio-dom-container > .content-body > .centre-content-text > p").html("Pulsa otra vez para desactivarla.");
+    $("#audio-dom-container > .content-body > .content-button-group").css("border","2px solid gold");
+    $("#buttonDo").hide();
+    $("#buttonMi").hide();
+    $("#buttonFa").hide();
+    $("#buttonSi").hide();
+}
+
+function back2Normally(){
+    $("#audio-dom-container").css("background-color","#00000000");
+    $("#audio-dom-container > .content-tittle").css("color","var(--main-color)");
+    $("#audio-dom-container > .content-tittle").css("font-size","2.4rem");
+    $("#audio-dom-container > .content-tittle").html("Audios y mensajes en el DOM");
+    $("#audio-dom-container > .content-body > .centre-content-text > p").css("color","var(--main-color)");
+    $("#audio-dom-container > .content-body > .centre-content-text > p").html("Estos botones reproducen una nota musical cada uno. Pero, cuidado, bajo ningún concepto pulses el botón rojo.");
+    $("#audio-dom-container > .content-body > .content-button-group").css("border","2px solid #4cc9f0");
+    $("#buttonDo").show();
+    $("#buttonMi").show();
+    $("#buttonFa").show();
+    $("#buttonSi").show();
+}
+
 $("#buttonDo").click(function(){
     stopAllAudios();
-    $(".audio")[0].play();
+    if(play != 0){
+        play = 0;
+        $(".audio")[0].play();
+    }else{
+        play = -1;
+    }
 });
 
 $("#buttonMi").click(function(){
     stopAllAudios();
-    $(".audio")[1].play();
+    if(play != 1){
+        play = 1;
+        $(".audio")[1].play();
+    }else{
+        play = -1;
+    }
+        
 });
 
 $("#buttonFa").click(function(){
     stopAllAudios();
+    if(play != 2){
+        play = 2;
     $(".audio")[2].play();
+    }else{
+        play = -1;
+    }
 });
 
 $("#buttonSi").click(function(){
     stopAllAudios();
-    $(".audio")[3].play();
+    if(play != 3){
+        play = 3;
+        $(".audio")[3].play();
+    }else{
+        play = -1;
+    }
 });
 
 $("#buttonRo").click(function(){
     stopAllAudios();
-    $(".audio")[4].play();
+    if(play != 4){
+        play = 4;
+        back2URSS();
+        $(".audio")[4].play();
+    }else{
+        back2Normally();
+        play = -1;
+    }
 });
 
 
