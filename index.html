@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="includes/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-    <link rel="icon" href="icon/favicon.ico">
+    <link rel="icon" href="mmedia/icon/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Nibosha Desings</title>
+    <title>Eric Guzman</title>
 </head>
 <body>
     <header>
         <div class="teselado"></div>
         <div class="aesthetic-background"></div>
-        <div class="head-logo">
+        <div class="head-logo aboutMe">
             <img src="mmedia/img/HeadLogo.png" alt="logo">
         </div>
-        <div class="page-name">
+        <div class="page-name aboutMe">
             <h1>Eric Guzman</h1>
         </div>
         <div id="hamburguer">
@@ -242,6 +242,62 @@
                 </div>
             </div>
 
+            <div class="content-container" id="mejora-dom-container">
+                <h2 class="content-tittle">Mejora del DOM</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text"><p>Aquí especifico las mejoras que se han hecho en el DOM, por si no se ven claras.</p></div>
+                    <div class="centre-content-text"><p>Esta web usa una sola página, es decir, solo tiene un index.html. De este modo, la carga se hace solo al principio.</p></div>
+                    <div class="centre-content-text"><p>Pero, ¿Cómo es posible? Todo gracias a JQuery. Cada opción de los distintos menus cambia la clase de los contenedores con el contenido requerido.
+                        De este modo, cada contenedor tiene una clase que les hace "invisibles" y solo uno no la tiene. Al elegir una opción el conteneder que esté visible adquiere la clase invisible y el seleccionado la pierde, aquí un pequeño ejemplo:
+                    </p></div>
+                    <div class="centre-content-text content-code">
+                        <p>$("#guia-estilos").click(function(){</p>
+                        <p>$(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");</p>
+                        <p>$(".nav-option").css("pointer-events","visible");</p>
+                        <p>$("#guia-estilos h3").css("color","var(--deco-color-1)");</p>
+                        <p>$("#guia-estilos").css("pointer-events","none");</p>
+                        <p>$(".content-container").removeClass("container-center");</p>
+                        <p>$("#guia-estilos-container").addClass("container-center");</p>
+                        <p>});</p>
+                    </div>
+                    <div class="centre-content-text"><p>Para saber más, visita el proyecto en mi Github.</p></div>
+                </div>
+            </div>
+
+            <div class="content-container" id="audio-dom-container">
+                <h2 class="content-tittle">Audios y mensajes en el DOM</h2>
+                <div class="content-body col-body">
+                    <div class="centre-content-text"><p>Estos botones reproducen una nota musical cada uno. Pero, cuidado, bajo ningún concepto pulses el botón rojo.</p></div>
+                    <div class="centre-content-text content-button-group">
+                        <div class="content-sound-button" id="buttonDo">
+                            <audio class="audio">
+                                <source src="mmedia/sounds/Do_nota.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div class="content-sound-button" id="buttonMi">
+                            <audio class="audio">
+                                <source src="mmedia/sounds/Mi_nota.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div class="content-sound-button" id="buttonFa">
+                            <audio class="audio">
+                                <source src="mmedia/sounds/Fa_nota.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div class="content-sound-button" id="buttonSi">
+                            <audio class="audio">
+                                <source src="mmedia/sounds/Si_nota.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div class="content-sound-button" id="buttonRo">
+                            <audio class="audio">
+                                <source src="mmedia/sounds/surprise.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
         </section>
         <aside class="aside-right">
@@ -271,6 +327,8 @@
                 <div class="nav-option-desplegable"><h2>Diseño</h2>
                     <div class="nav-desplegable">
                         <div class="nav-option" id="guia-estilos"><h3>Guia Estilos</h3></div>
+                        <div class="nav-option" id="mejora-dom"><h3>Mejora DOM</h3></div>
+                        <div class="nav-option" id="audio-dom"><h3>Audios y mensajes</h3></div>
                     </div>
                 </div>     
             </nav>

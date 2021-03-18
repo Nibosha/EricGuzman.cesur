@@ -28,6 +28,11 @@ $("#aboutMe").click(function(){
 
 });
 
+$(".aboutMe").click(function(){
+    $(".content-container").removeClass("container-center");
+    $("#aboutMe-container").addClass("container-center");
+});
+
 $("#curriculum").click(function(){
     $(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");
     $(".nav-option").css("pointer-events","visible");
@@ -111,6 +116,24 @@ $("#guia-estilos").click(function(){
     $("#guia-estilos-container").addClass("container-center");
 });
 
+$("#mejora-dom").click(function(){
+    $(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");
+    $(".nav-option").css("pointer-events","visible");
+    $("#mejora-dom h3").css("color","var(--deco-color-1)");
+    $("#mejora-dom").css("pointer-events","none");
+    $(".content-container").removeClass("container-center");
+    $("#mejora-dom-container").addClass("container-center");
+});
+
+$("#audio-dom").click(function(){
+    $(".nav-option h2, .nav-option h3").css("color","var(--main-color-1)");
+    $(".nav-option").css("pointer-events","visible");
+    $("#audio-dom h3").css("color","var(--deco-color-1)");
+    $("#audio-dom").css("pointer-events","none");
+    $(".content-container").removeClass("container-center");
+    $("#audio-dom-container").addClass("container-center");
+});
+
 //=================RIGHT ASIDE=====================================================//
 
 $(".aside-right").mouseenter(function(){
@@ -167,4 +190,37 @@ $("#fontsize-select").change(function(){
 });
 
 $("#visitas").val(localStorage.visitas);
+
+//=================AUDIOS=====================================================//
+function stopAllAudios(){
+    for (let i = 0; i < 5; i++) {
+        $(".audio")[i].pause();
+        $(".audio")[i].currentTime = 0;  
+    }
+}
+$("#buttonDo").click(function(){
+    stopAllAudios();
+    $(".audio")[0].play();
+});
+
+$("#buttonMi").click(function(){
+    stopAllAudios();
+    $(".audio")[1].play();
+});
+
+$("#buttonFa").click(function(){
+    stopAllAudios();
+    $(".audio")[2].play();
+});
+
+$("#buttonSi").click(function(){
+    stopAllAudios();
+    $(".audio")[3].play();
+});
+
+$("#buttonRo").click(function(){
+    stopAllAudios();
+    $(".audio")[4].play();
+});
+
 

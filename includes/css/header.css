@@ -5,6 +5,10 @@
     white-space: nowrap;
 }
 
+.aboutMe{
+    cursor: pointer;
+}
+
 .teselado{
     z-index: 1;
     position: absolute;

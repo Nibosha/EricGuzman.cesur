@@ -72,8 +72,22 @@
     transition-duration: 0.5s;
 }
 
+
 .aboutMe-content-img img:hover{
     filter: grayscale(0);
+}
+
+.centre-img{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.centre-img img{
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
 }
 
 .container-center{
@@ -115,8 +129,57 @@
     pointer-events: none;
 }
 
+.content-code, .content-button-group{
+    background-color: #658aa155;  
+    border: 2px solid #4cc9f0;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.content-code p{
+    color: #f72585;
+    margin: 0;
+}
 
 
-#certificado-container, #ftp-seguro-container, #configuracion-container, #url-container{
+#certificado-container, #ftp-seguro-container, #configuracion-container, #url-container, #mejora-dom-container{
     overflow-y: scroll;
+}
+
+.content-button-group{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 8rem 0;
+}
+
+.content-sound-button{
+    display: flex;
+    height: 8rem;
+    width: 8rem;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#buttonDo{
+    background-image:url(../../mmedia/img/hexagon-button-1.svg);
+}
+
+#buttonMi{
+    background-image:url(../../mmedia/img/hexagon-button-2.svg);
+}
+
+#buttonFa{
+    background-image:url(../../mmedia/img/hexagon-button-3.svg);
+}
+
+#buttonSi{
+    background-image:url(../../mmedia/img/hexagon-button-4.svg);
+}
+
+#buttonRo{
+    background-image:url(../../mmedia/img/hexagon-button-5.svg);
 }
